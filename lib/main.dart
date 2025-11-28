@@ -2,21 +2,22 @@ import 'package:flutter/material.dart';
 import 'app_router.dart';
 
 void main() {
-  runApp(const BankMenuApp());
+  runApp(const ZooInteligenteApp());
 }
 
-class BankMenuApp extends StatelessWidget {
-  const BankMenuApp({super.key});
+class ZooInteligenteApp extends StatelessWidget {
+  const ZooInteligenteApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: 'Banco - GoRouter',
+    return MaterialApp(
+      title: 'Zoo Inteligente',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
         useMaterial3: true,
       ),
-      routerConfig: appRouter,
+      onGenerateRoute: AppRouter.generateRoute,
+      initialRoute: '/',
     );
   }
 }

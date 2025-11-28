@@ -1,24 +1,22 @@
-import 'package:flutter/material.dart';
-import 'home_page.dart';
-import 'animales_habitat_page.dart';
-import 'calculadora_alimento_page.dart';
-import 'favoritos_page.dart';
+import 'pages/home.dart';
+import 'pages/animalesxHabitad.dart';
+import 'pages/cal_alimentoDiario.dart';
+import 'pages/favoritos_zoo.dart';
+import 'pages/plan_alimentacion_se.dart';
 
 class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case '/':
-        return MaterialPageRoute(builder: (_) => const HomePage());
-
+        return MaterialPageRoute(builder: (_) => const WorkshopHomePage());
       case '/animalesHabitat':
-        return MaterialPageRoute(builder: (_) => const AnimalesHabitatPage());
-
+        return MaterialPageRoute(builder: (_) => const AnimalesxHabitadPage());
       case '/calculadoraAlimento':
-        return MaterialPageRoute(builder: (_) => const CalculadoraAlimentoPage());
-
+        return MaterialPageRoute(builder: (_) => const CalAlimentoDiarioPage());
       case '/favoritos':
-        return MaterialPageRoute(builder: (_) => const FavoritosPage());
-
+        return MaterialPageRoute(builder: (_) => const FavoritosZooPage());
+      case '/planAlimentacion':
+        return MaterialPageRoute(builder: (_) => const PlanAlimentacionSemanalPage());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
